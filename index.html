@@ -6,15 +6,10 @@
 <title>เว็บไซต์ของฉัน</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
-<!-- ==========================================================================
-     แก้เฉพาะในกล่องนี้ก็พอ ส่วนอื่นของไฟล์ไม่ต้องแตะก็ได้
-     ทุกช่องมีคำอธิบายกำกับว่าใส่อะไร
-     ========================================================================== -->
-<script>
 <script>
 const ME = {
 
-  // GitHub username ของคุณ (หากเปลี่ยนชื่อใหม่แล้ว อย่าลืมมาแก้ตรงนี้นะครับ)
+  // GitHub username
   github: "Film-ware",
 
   // ชื่อที่ต้องการให้แสดง
@@ -37,16 +32,16 @@ const ME = {
     "พื้นฐานอินเทอร์เน็ต เครือข่าย และบริการออนไลน์",
   ],
 
-  // ผลงาน (ปี 1 เทอม 1 ยังปล่อยว่างไว้ตามระบบ หน้าเว็บจะขึ้นข้อความแจ้งให้อัตโนมัติครับ)
+  // ผลงาน
   works: [],
 
-  // ช่องทางติดต่อ (ใช้อีเมลสถาบันและ GitHub)
+  // ช่องทางติดต่อ
   links: [
-    { label: "GitHub", url: "https://github.com/thanaphatsh-hash" },
+    { label: "GitHub", url: "https://github.com/Film-ware" },
     { label: "Email (RMUTI)", url: "mailto:thanaphat.sh@rmuti.ac.th" },
   ],
 
-  // ธีมสี สามารถเปลี่ยนเป็น "ocean" | "sunset" | "forest" | "grape" | "mono" | "mono-light" ได้ตามชอบ
+  // ธีมสี
   theme: "ocean",
 
 };
@@ -56,13 +51,10 @@ const ME = {
 /* ---------- สีพื้นฐาน ทุกธีมใช้ร่วมกัน ---------- */
 :root {
   --bg:#0b1020; --line:#24304f; --text:#e8edf7; --muted:#93a1c0;
-  --surface:rgba(255,255,255,.05);      /* พื้นของการ์ดผลงานและแผงข้อมูล */
+  --surface:rgba(255,255,255,.05);
   --mono: ui-monospace,"SF Mono",Menlo,Consolas,monospace;
 }
 
-/* ---------- ธีมสี เลือกได้ที่ช่อง theme ด้านบน ไม่ต้องแก้ตรงนี้ ----------
-   ห้าธีมแรกเปลี่ยนแค่สีเน้นกับแสงพื้นหลัง พื้นหลังยังเข้มเหมือนกันหมด
-   จึงไม่มีทางเลือกจนอ่านไม่ออก                                          */
 :root,
 [data-theme="ocean"]  { --accent:#38bdf8; --accent-soft:#0ea5e9; --glow1:#1d2a52; --glow2:#10305c; }
 [data-theme="sunset"] { --accent:#fb923c; --accent-soft:#f97316; --glow1:#4a2418; --glow2:#5c2b10; }
@@ -70,8 +62,6 @@ const ME = {
 [data-theme="grape"]  { --accent:#c084fc; --accent-soft:#a855f7; --glow1:#2e1d52; --glow2:#3d1a5c; }
 [data-theme="mono"]   { --accent:#e2e8f0; --accent-soft:#cbd5e1; --glow1:#1e293b; --glow2:#0f172a; }
 
-/* ธีมเดียวที่พลิกเป็นพื้นสว่าง จึงต้องเขียนยาวกว่าเพื่อน
-   เพราะต้องกลับค่าพื้นหลัง ตัวอักษร เส้น และพื้นการ์ดใหม่ทั้งชุด */
 [data-theme="mono-light"] {
   --accent:#334155; --accent-soft:#475569; --glow1:#dbe3ee; --glow2:#e6ebf3;
   --bg:#f7f9fc; --line:#ccd6e4; --text:#0f172a; --muted:#52627d;
@@ -83,24 +73,21 @@ const ME = {
 body{
   margin:0; min-height:100vh; color:var(--text);
   font-family:"Segoe UI","Noto Sans Thai",system-ui,sans-serif;
-  line-height:1.75;                       /* ระยะห่างระหว่างบรรทัด อ่านง่ายขึ้นมาก */
+  line-height:1.75;
   background:
     radial-gradient(1000px 460px at 12% -10%, var(--glow1) 0, transparent 60%),
     radial-gradient(820px 400px at 92% 0,   var(--glow2) 0, transparent 55%),
     var(--bg);
 }
 
-/* ความกว้างจำกัดไว้ ไม่ให้บรรทัดยาวจนตาไล่ไม่ทัน */
 .wrap{ max-width:760px; margin:0 auto; padding:0 22px 80px }
 
-/* ---------- ส่วนหัว ---------- */
 .hero{ display:flex; gap:22px; align-items:center; padding:64px 0 8px; flex-wrap:wrap }
 .avatar{
   width:96px; height:96px; border-radius:50%;
   border:2px solid var(--accent); object-fit:cover; flex-shrink:0;
   background:var(--surface);
 }
-/* ใช้แทนรูปโปรไฟล์ เมื่อโหลดรูปจาก GitHub ไม่สำเร็จ */
 .avatar-fallback{
   width:96px; height:96px; border-radius:50%; flex-shrink:0;
   border:2px solid var(--accent); background:var(--surface);
@@ -117,7 +104,6 @@ h1{ font-size:clamp(30px,6vw,46px); line-height:1.15; margin:0 0 8px; letter-spa
 
 .about{ color:var(--muted); margin:26px 0 0; max-width:62ch }
 
-/* ---------- ปุ่มลิงก์ ---------- */
 .links{ display:flex; flex-wrap:wrap; gap:10px; padding:0; margin:24px 0 0; list-style:none }
 .links a{
   display:inline-block; border:1px solid var(--line); border-radius:999px;
@@ -126,7 +112,6 @@ h1{ font-size:clamp(30px,6vw,46px); line-height:1.15; margin:0 0 8px; letter-spa
 }
 .links a:hover, .links a:focus-visible{ border-color:var(--accent); color:var(--accent) }
 
-/* ---------- หัวข้อของแต่ละส่วน ---------- */
 section{ margin-top:52px }
 h2{
   font:600 12px/1 var(--mono); letter-spacing:.16em; text-transform:uppercase;
@@ -134,14 +119,12 @@ h2{
   padding-bottom:10px; margin:0 0 20px;
 }
 
-/* ---------- รายการกำลังเรียนรู้ ---------- */
 .learning{ list-style:none; padding:0; margin:0 }
 .learning li{
   border-left:2px solid var(--accent); padding:2px 0 2px 16px;
   margin-bottom:14px; color:var(--muted);
 }
 
-/* ---------- ผลงาน ---------- */
 .works{ display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)) }
 .work{
   border:1px solid var(--line); border-radius:12px; padding:16px 18px;
@@ -156,7 +139,6 @@ h2{
   color:var(--muted); text-align:center; font-size:15px;
 }
 
-/* ---------- แผงข้อมูลการเชื่อมต่อ ---------- */
 .panel{ border:1px solid var(--line); border-radius:14px; background:var(--surface); padding:4px 20px 16px }
 .row{
   display:grid; grid-template-columns:minmax(130px,1fr) minmax(0,1.5fr); gap:12px;
@@ -171,7 +153,6 @@ h2{
 footer{ margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px }
 footer a{ color:var(--accent) }
 
-/* ---------- จอมือถือ ---------- */
 @media (max-width:520px){
   .hero{ padding-top:44px; gap:16px }
   .avatar, .avatar-fallback{ width:72px; height:72px; font-size:28px }
@@ -203,8 +184,6 @@ footer a{ color:var(--accent) }
     <div class="works" id="works"></div>
   </section>
 
-  <!-- ค่าทุกตัวในแผงนี้ browser วัดจากการโหลดหน้านี้จริง ไม่ได้เขียนค้างไว้
-       เปรียบเทียบกับ DevTools (F12) แท็บ Network ได้ ค่าควรสอดคล้องกัน -->
   <section>
     <h2>ข้อมูลการเชื่อมต่อของหน้านี้</h2>
     <div class="panel">
@@ -222,7 +201,6 @@ footer a{ color:var(--accent) }
 <script>
 const $ = (id) => document.getElementById(id);
 
-/* ---------- 1) นำข้อมูลจากกล่อง ME มาแสดง ---------- */
 document.title = ME.name;
 document.documentElement.dataset.theme = ME.theme || 'ocean';
 
@@ -231,9 +209,6 @@ $('name').textContent    = ME.name;
 $('tagline').textContent = ME.tagline;
 $('about').textContent   = ME.about;
 
-/* รูปโปรไฟล์ดึงจาก GitHub อัตโนมัติ ไม่ต้องอัปโหลดรูปเอง
-   ถ้าโหลดไม่สำเร็จ (พิมพ์ username ผิด หรือเน็ตมีปัญหา) จะแสดงตัวอักษรแรกของชื่อแทน
-   หน้าเว็บจะได้ไม่มีรูปแตกค้างอยู่ */
 const avatar = $('avatar');
 avatar.alt = 'รูปโปรไฟล์ของ ' + ME.name;
 avatar.addEventListener('error', () => {
@@ -247,7 +222,7 @@ avatar.src = 'https://github.com/' + ME.github + '.png?size=192';
 
 for (const item of ME.learning || []) {
   const li = document.createElement('li');
-  li.textContent = item;          // ใช้ textContent เสมอ ปลอดภัยกว่า innerHTML
+  li.textContent = item;
   $('learning').appendChild(li);
 }
 
@@ -261,7 +236,6 @@ for (const link of ME.links || []) {
   $('links').appendChild(li);
 }
 
-/* ผลงานยังว่างได้ ปี 1 เทอมแรกเป็นเรื่องปกติ */
 if (!ME.works || ME.works.length === 0) {
   const box = document.createElement('div');
   box.className = 'empty';
@@ -289,9 +263,7 @@ if (!ME.works || ME.works.length === 0) {
 
 $('repolink').href = 'https://github.com/' + ME.github + '/' + ME.github + '.github.io';
 
-/* ---------- 2) แผงข้อมูลการเชื่อมต่อ อ่านค่าจริงจาก Performance API ---------- */
 function ms(v) {
-  /* 0 ms ไม่ได้แปลว่าไม่มีค่า แต่แปลว่า browser ข้ามขั้นนั้นเพราะมีข้อมูลใน cache อยู่แล้ว */
   if (typeof v !== 'number' || v < 0 || Number.isNaN(v)) return '—';
   return Math.round(v) + ' ms';
 }
