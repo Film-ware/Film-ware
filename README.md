@@ -19,4 +19,4 @@ I'm an enthusiastic **Computer Engineering** student at **RMUTI Khon Kaen (KKC)*
 
 **🚀 Focus Areas**  
 `Web Development` • `AI & Machine Learning` • `Data Science` • `Microcontrollers / IoT`
-`BitCrafter@GitHub:~$ cat README.md`
+BitCrafter@GitHub:~$ cat README.md
