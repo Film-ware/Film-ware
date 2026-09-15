@@ -6,7 +6,9 @@
 
   <h3>Computer Engineering Student at RMUTI</h3>
 
-  <p><i>"Transforming logic and coffee into code and circuits."</i></p>
+  <p>
+    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=16&pause=1000&color=333333&center=true&vCenter=true&width=550&lines=Transforming+logic+and+coffee...;...into+code+and+circuits.+%E2%9A%A1%EF%B8%8F" alt="Typing SVG" />
+  </p>
 
   <p>
     <img src="https://img.shields.io/badge/Focus-Embedded_Systems-orange?style=flat-square" alt="Embedded Systems">
