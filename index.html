@@ -1,348 +1,4 @@
 <!doctype html>
-<html lang="th">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BitCrafter - Portfolio</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
-
-<script>
-const ME = {
-
-  // GitHub username
-  github: "Film-ware",
-
-  // ชื่อที่ต้องการให้แสดง
-  name: "ธนภัทร์ สาครขันธ์ (BitCrafter)",
-
-  // บอกว่าคุณคือใคร สั้น ๆ
-  role: "Computer Engineering Student · RMUTI KKC",
-
-  // ประโยคสั้นๆ บอกความสนใจในการพัฒนา/สร้างสรรค์ผลงาน
-  tagline: "\"Transforming logic and coffee into code and circuits.\" ⚡💻🤖",
-
-  // แนะนำตัว 2-3 บรรทัด
-  about: "สวัสดีครับ! ผมฟิล์ม (BitCrafter) นักศึกษาวิศวกรรมคอมพิวเตอร์ มทร.อีสาน วิทยาเขตขอนแก่น หลงใหลในการสำรวจเทคโนโลยีใหม่ๆ แก้ปัญหาที่ซับซ้อน และสนุกกับการสร้างโปรเจกต์ที่เชื่อมต่อระหว่างโลกซอฟต์แวร์และฮาร์ดแวร์เข้าด้วยกัน! ⚙️🔧",
-
-  // สิ่งที่กำลังศึกษาเรียนรู้อยู่ในปัจจุบัน
-  learning: [
-    "Programming Languages: พัฒนาทักษะภาษา C, Python และ Java",
-    "Web Development: โครงสร้างและตกแต่งเว็บไซต์ด้วย HTML5 & CSS3",
-    "Microcontrollers & IoT: การออกแบบระบบสมองกลฝังตัวและเซนเซอร์",
-    "AI & Data Science: มีความสนใจและกำลังศึกษาต่อยอดเป็นพิเศษ",
-  ],
-
-  // ผลงาน
-  works: [
-    {
-      title: "🗑️ Smart Trash Can",
-      desc: "ถังขยะอัจฉริยะบนโต๊ะทำงาน ทำงานอัตโนมัติแบบไร้สัมผัสโดยใช้เซนเซอร์อัลตราโซนิกและเซอร์โวมอเตอร์",
-    },
-    {
-      title: "🏎️ Line-Following Robot",
-      desc: "หุ่นยนต์เดินตามเส้นอัตโนมัติ ควบคุมการทำงานด้วยบอร์ด Arduino เพื่อการนำทางและเดินตามแทร็กที่แม่นยำ",
-    },
-    {
-      title: "🔌 Circuit Design Explorations",
-      desc: "โปรเจกต์ออกแบบฮาร์ดแวร์และวงจรลอจิกระดับพื้นฐาน เช่น การออกแบบและสร้าง 4-bit Full Adder",
-    }
-  ],
-
-  // ช่องทางติดต่อ
-  links: [
-    { label: "GitHub", url: "https://github.com/Film-ware" },
-    { label: "Email", url: "mailto:thanaphat.sh@rmuti.ac.th" },
-  ],
-
-  // ธีมสี (ผมเปลี่ยนเป็น matrix ให้เข้ากับสายฮาร์ดแวร์/โค้ดดิ้งครับ!)
-  theme: "matrix",
-
-};
-</script>
-
-<style>
-/* ---------- สีพื้นฐาน ทุกธีมใช้ร่วมกัน ---------- */
-:root {
-  --bg:#0b1020; --line:#24304f; --text:#e8edf7; --muted:#93a1c0;
-  --surface:rgba(255,255,255,.05);
-  --mono: ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-}
-
-/* ---------- ธีมมาตรฐาน ---------- */
-:root,
-[data-theme="ocean"]  { --accent:#38bdf8; --accent-soft:#0ea5e9; --glow1:#1d2a52; --glow2:#10305c; }
-[data-theme="sunset"] { --accent:#fb923c; --accent-soft:#f97316; --glow1:#4a2418; --glow2:#5c2b10; }
-[data-theme="forest"] { --accent:#34d399; --accent-soft:#10b981; --glow1:#14342a; --glow2:#0f3d2e; }
-[data-theme="grape"]  { --accent:#c084fc; --accent-soft:#a855f7; --glow1:#2e1d52; --glow2:#3d1a5c; }
-[data-theme="mono"]   { --accent:#e2e8f0; --accent-soft:#cbd5e1; --glow1:#1e293b; --glow2:#0f172a; }
-
-/* ---------- ธีมพิเศษสำหรับ BitCrafter (Matrix / Cyberpunk Green) ---------- */
-[data-theme="matrix"] {
-  --accent: #00ff41; 
-  --accent-soft: #008f11; 
-  --glow1: #051a05; 
-  --glow2: #0a290a; 
-  --bg: #090a0f; 
-  --line: #1f401f; 
-  --text: #e0ffe0; 
-  --muted: #85c285; 
-  --surface: rgba(0, 255, 65, 0.05);
-}
-
-[data-theme="mono-light"] {
-  --accent:#334155; --accent-soft:#475569; --glow1:#dbe3ee; --glow2:#e6ebf3;
-  --bg:#f7f9fc; --line:#ccd6e4; --text:#0f172a; --muted:#52627d;
-  --surface:rgba(15,23,42,.04);
-}
-
-*{ box-sizing:border-box }
-
-body{
-  margin:0; min-height:100vh; color:var(--text);
-  font-family:"Segoe UI","Noto Sans Thai",system-ui,sans-serif;
-  line-height:1.75;
-  background:
-    radial-gradient(1000px 460px at 12% -10%, var(--glow1) 0, transparent 60%),
-    radial-gradient(820px 400px at 92% 0,   var(--glow2) 0, transparent 55%),
-    var(--bg);
-}
-
-.wrap{ max-width:760px; margin:0 auto; padding:0 22px 80px }
-
-.hero{ display:flex; gap:22px; align-items:center; padding:64px 0 8px; flex-wrap:wrap }
-.avatar{
-  width:96px; height:96px; border-radius:50%;
-  border:2px solid var(--accent); object-fit:cover; flex-shrink:0;
-  background:var(--surface);
-}
-.avatar-fallback{
-  width:96px; height:96px; border-radius:50%; flex-shrink:0;
-  border:2px solid var(--accent); background:var(--surface);
-  display:flex; align-items:center; justify-content:center;
-  font-size:38px; font-weight:600; color:var(--accent);
-}
-.hero-text{ flex:1; min-width:240px }
-.role{
-  font:600 12px/1 var(--mono); letter-spacing:.14em;
-  text-transform:uppercase; color:var(--accent); margin:0 0 8px;
-}
-h1{ font-size:clamp(30px,6vw,46px); line-height:1.15; margin:0 0 8px; letter-spacing:-.02em }
-.tagline{ font-size:clamp(17px,2.6vw,20px); color:var(--text); margin:0; opacity:.92 }
-
-.about{ color:var(--muted); margin:26px 0 0; max-width:62ch }
-
-.links{ display:flex; flex-wrap:wrap; gap:10px; padding:0; margin:24px 0 0; list-style:none }
-.links a{
-  display:inline-block; border:1px solid var(--line); border-radius:999px;
-  padding:9px 20px; color:var(--text); text-decoration:none; font-size:15px;
-  transition:border-color .15s ease, color .15s ease, box-shadow .15s ease;
-}
-.links a:hover, .links a:focus-visible{ 
-  border-color:var(--accent); 
-  color:var(--accent);
-  box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
-}
-
-section{ margin-top:52px }
-h2{
-  font:600 12px/1 var(--mono); letter-spacing:.16em; text-transform:uppercase;
-  color:var(--muted); border-bottom:1px solid var(--line);
-  padding-bottom:10px; margin:0 0 20px;
-}
-
-.learning{ list-style:none; padding:0; margin:0 }
-.learning li{
-  border-left:2px solid var(--accent); padding:2px 0 2px 16px;
-  margin-bottom:14px; color:var(--muted);
-}
-
-.works{ display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)) }
-.work{
-  border:1px solid var(--line); border-radius:12px; padding:16px 18px;
-  background:var(--surface);
-  transition: transform .2s ease, border-color .2s ease;
-}
-.work:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-soft);
-}
-.work h3{ margin:0 0 6px; font-size:17px; color:var(--text); }
-.work p{ margin:0; color:var(--muted); font-size:14.5px }
-.work a{ color:var(--accent); text-decoration:none; font-size:14px; display:inline-block; margin-top:10px }
-.work a:hover{ text-decoration:underline }
-.empty{
-  border:1px dashed var(--line); border-radius:12px; padding:26px 20px;
-  color:var(--muted); text-align:center; font-size:15px;
-}
-
-.panel{ border:1px solid var(--line); border-radius:14px; background:var(--surface); padding:4px 20px 16px }
-.row{
-  display:grid; grid-template-columns:minmax(130px,1fr) minmax(0,1.5fr); gap:12px;
-  padding:11px 0; border-bottom:1px dashed var(--line); align-items:baseline;
-}
-.row:last-of-type{ border-bottom:0 }
-.row dt{ color:var(--muted); font-size:14px; margin:0 }
-.row dd{ margin:0; font-family:var(--mono); font-size:14px; color:var(--accent); word-break:break-all }
-.row .note{ display:block; color:var(--muted); font-family:inherit; font-size:12.5px }
-.hint{ color:var(--muted); font-size:14px; margin:14px 0 0 }
-
-footer{ margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px }
-footer a{ color:var(--accent) }
-
-@media (max-width:520px){
-  .hero{ padding-top:44px; gap:16px }
-  .avatar, .avatar-fallback{ width:72px; height:72px; font-size:28px }
-  .row{ grid-template-columns:1fr; gap:2px }
-}
-</style>
-</head>
-<body>
-<div class="wrap">
-
-  <header class="hero">
-    <img class="avatar" id="avatar" alt="" width="96" height="96">
-    <div class="hero-text">
-      <p class="role" id="role"></p>
-      <h1 id="name"></h1>
-      <p class="tagline" id="tagline"></p>
-    </div>
-  </header>
-  <p class="about" id="about"></p>
-  <ul class="links" id="links"></ul>
-
-  <section>
-    <h2>กำลังเรียนรู้ & ความสนใจ 🚀</h2>
-    <ul class="learning" id="learning"></ul>
-  </section>
-
-  <section>
-    <h2>ผลงาน & โปรเจกต์ 🛠️</h2>
-    <div class="works" id="works"></div>
-  </section>
-
-  <section>
-    <h2>ข้อมูลการเชื่อมต่อของหน้านี้ 🌐</h2>
-    <div class="panel">
-      <dl id="netpanel"></dl>
-      <p class="hint">กด F12 เลือกแท็บ Network แล้วกด Ctrl+F5 เพื่อเปรียบเทียบค่า</p>
-    </div>
-  </section>
-
-  <footer>
-    สร้างด้วย HTML, CSS และ JavaScript · โฮสต์บน GitHub Pages ·
-    <a id="repolink" href="https://github.com">ดูซอร์สโค้ดของหน้านี้</a>
-  </footer>
-</div>
-
-<script>
-const $ = (id) => document.getElementById(id);
-
-document.title = ME.name;
-document.documentElement.dataset.theme = ME.theme || 'ocean';
-
-$('role').textContent    = ME.role;
-$('name').textContent    = ME.name;
-$('tagline').textContent = ME.tagline;
-$('about').textContent   = ME.about;
-
-const avatar = $('avatar');
-avatar.alt = 'รูปโปรไฟล์ของ ' + ME.name;
-avatar.addEventListener('error', () => {
-  const box = document.createElement('div');
-  box.className = 'avatar-fallback';
-  box.setAttribute('aria-hidden', 'true');
-  box.textContent = (ME.name || '?').trim().charAt(0);
-  avatar.replaceWith(box);
-});
-avatar.src = 'https://github.com/' + ME.github + '.png?size=192';
-
-for (const item of ME.learning || []) {
-  const li = document.createElement('li');
-  li.textContent = item;
-  $('learning').appendChild(li);
-}
-
-for (const link of ME.links || []) {
-  const a = document.createElement('a');
-  a.href = link.url;
-  a.textContent = link.label;
-  a.rel = 'noopener noreferrer';
-  const li = document.createElement('li');
-  li.appendChild(a);
-  $('links').appendChild(li);
-}
-
-if (!ME.works || ME.works.length === 0) {
-  const box = document.createElement('div');
-  box.className = 'empty';
-  box.textContent = 'ยังไม่มีผลงานในหน้านี้ กำลังเรียนรู้อยู่ แล้วจะกลับมาเพิ่มเรื่อย ๆ';
-  $('works').appendChild(box);
-} else {
-  for (const w of ME.works) {
-    const card = document.createElement('div');
-    card.className = 'work';
-    const h3 = document.createElement('h3');
-    h3.textContent = w.title;
-    const p = document.createElement('p');
-    p.textContent = w.desc;
-    card.append(h3, p);
-    if (w.url) {
-      const a = document.createElement('a');
-      a.href = w.url;
-      a.textContent = 'ดูผลงาน ↗';
-      a.rel = 'noopener noreferrer';
-      card.appendChild(a);
-    }
-    $('works').appendChild(card);
-  }
-}
-
-$('repolink').href = 'https://github.com/' + ME.github + '/' + ME.github + '.github.io';
-
-function ms(v) {
-  if (typeof v !== 'number' || v < 0 || Number.isNaN(v)) return '—';
-  return Math.round(v) + ' ms';
-}
-
-window.addEventListener('load', () => setTimeout(() => {
-  const nav = performance.getEntriesByType('navigation')[0];
-  const rows = [
-    ['Domain name', location.hostname || '(เปิดจากไฟล์ในเครื่อง)',
-     'ชื่อโดเมนต้องถูกแปลงเป็น IP address ผ่าน DNS ก่อน จึงจะติดต่อ server ได้'],
-    ['Protocol', location.protocol,
-     'https คือ HTTP ที่เพิ่มการเข้ารหัสและการยืนยันตัวตน server ด้วย certificate'],
-  ];
-  if (nav) rows.push(
-    ['HTTP version', nav.nextHopProtocol || '—',
-     'h2 คือ HTTP/2 และ h3 คือ HTTP/3 ซึ่งส่งหลายไฟล์พร้อมกันได้ในการเชื่อมต่อเดียว'],
-    ['DNS lookup', ms(nav.domainLookupEnd - nav.domainLookupStart),
-     'เวลาที่ใช้แปลงชื่อโดเมนเป็น IP address ถ้าได้ 0 ms แปลว่ามีคำตอบอยู่ใน cache แล้ว'],
-    ['Connection + TLS', ms(nav.connectEnd - nav.connectStart),
-     'เวลาสร้างการเชื่อมต่อ รวมขั้นตอน TLS handshake ก่อนเริ่มรับส่งข้อมูลจริง'],
-    ['TTFB', ms(nav.responseStart - nav.requestStart),
-     'Time To First Byte เวลาตั้งแต่ส่ง request จนได้ข้อมูลไบต์แรกกลับมา ยิ่ง server ไกลยิ่งสูง'],
-  );
-
-  for (const [label, value, note] of rows) {
-    const row = document.createElement('div');
-    row.className = 'row';
-    const dt = document.createElement('dt');
-    dt.textContent = label;
-    const dd = document.createElement('dd');
-    dd.textContent = value;
-    const small = document.createElement('span');
-    small.className = 'note';
-    small.textContent = note;
-    dd.appendChild(small);
-    row.append(dt, dd);
-    $('netpanel').appendChild(row);
-  }
-}, 0));
-</script>
-</body>
-</html>
-19:42
-<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -356,87 +12,69 @@ const ME = {
   // GitHub username
   github: "Film-ware",
 
-  // Anonymous Name
+  // นามแฝง (ไม่ใช้ชื่อจริง)
   name: "BitCrafter",
 
-  // Generic Role
-  role: "Computer Engineering Student",
+  // ข้อความสีแดงด้านบนเหมือนในรูป (ระบุมหาวิทยาลัย แต่ปิดชื่อจริง)
+  role: "A FIRST-YEAR COMPUTER ENGINEERING STUDENT AT RAJAMANGALA UNIVERSITY OF TECHNOLOGY ISAN. MY ALIAS IS BITCRAFTER.",
 
-  // Tagline
-  tagline: "\"Transforming logic and coffee into code and circuits.\" ⚡💻🤖",
+  // Tagline (ตัวอักษรสีขาวใต้ชื่อ)
+  tagline: "Transforming logic and coffee into code and circuits.",
 
-  // About me (English)
-  about: "Hi! I'm an enthusiastic Computer Engineering student passionate about exploring new technologies, solving complex problems, and building projects that bridge software and hardware. Always eager to learn and create!",
+  // ข้อความแนะนำตัวเหมือนในรูปเป๊ะๆ (ภาษาอังกฤษ)
+  about: "Hi!, my alias is BitCrafter. I am studying Computer Engineering at RMUTI Khon Kaen, and I would like to work as a developer. I also want to keep improving my skills in this field, bridging software and hardware, and continue developing myself.",
 
-  // Learning / Interests
+  // สิ่งที่กำลังเรียนรู้
   learning: [
+    "HTML, CSS, JAVASCRIPT",
     "Programming Languages: C, Python, and Java",
-    "Web Development: HTML5, CSS3, and JavaScript",
-    "Microcontrollers & IoT: Embedded systems and sensor integration",
-    "AI & Data Science: Exploring fundamentals and practical applications",
+    "Microcontrollers & IoT: Embedded systems and sensor integration"
   ],
 
-  // Projects
+  // ผลงาน 3 อย่าง
   works: [
     {
-      title: "🏫 Classroom Booking System",
+      title: "Classroom Booking System",
       desc: "Final Project: A comprehensive web-based platform designed for reserving and efficiently managing classroom schedules.",
     },
     {
-      title: "🏎️ Line-Following & RC Robot",
+      title: "Line-Following & RC Robot",
       desc: "An autonomous line-following robot powered by Arduino, featuring manual movement control via a mobile smartphone app.",
     },
     {
-      title: "🗑️ Smart Trash Can",
+      title: "Smart Trash Can",
       desc: "An automated, hands-free desktop trash can built with an ultrasonic sensor and a servo motor.",
     }
   ],
 
-  // Links (Anonymous Email Placeholder)
+  // ปุ่ม GitHub เหมือนในรูป
   links: [
-    { label: "GitHub", url: "https://github.com/Film-ware" },
-    { label: "Email", url: "mailto:contact@example.com" }, // คุณสามารถเปลี่ยนเป็นอีเมลสำรองที่ไม่ระบุชื่อจริงได้
+    { label: "GitHub", url: "https://github.com/Film-ware" }
   ],
 
-  // Theme: matrix (Cyberpunk / Hacker style)
-  theme: "matrix",
+  // ธีมสีแดง-ดำ เหมือนในรูป
+  theme: "crimson",
 
 };
 </script>
 
 <style>
-/* ---------- Basic Colors ---------- */
+/* ---------- สีพื้นฐาน ---------- */
 :root {
-  --bg:#0b1020; --line:#24304f; --text:#e8edf7; --muted:#93a1c0;
-  --surface:rgba(255,255,255,.05);
   --mono: ui-monospace,"SF Mono",Menlo,Consolas,monospace;
 }
 
-/* ---------- Themes ---------- */
-:root,
-[data-theme="ocean"]  { --accent:#38bdf8; --accent-soft:#0ea5e9; --glow1:#1d2a52; --glow2:#10305c; }
-[data-theme="sunset"] { --accent:#fb923c; --accent-soft:#f97316; --glow1:#4a2418; --glow2:#5c2b10; }
-[data-theme="forest"] { --accent:#34d399; --accent-soft:#10b981; --glow1:#14342a; --glow2:#0f3d2e; }
-[data-theme="grape"]  { --accent:#c084fc; --accent-soft:#a855f7; --glow1:#2e1d52; --glow2:#3d1a5c; }
-[data-theme="mono"]   { --accent:#e2e8f0; --accent-soft:#cbd5e1; --glow1:#1e293b; --glow2:#0f172a; }
-
-/* ---------- Matrix Theme ---------- */
-[data-theme="matrix"] {
-  --accent: #00ff41; 
-  --accent-soft: #008f11; 
-  --glow1: #051a05; 
-  --glow2: #0a290a; 
-  --bg: #090a0f; 
-  --line: #1f401f; 
-  --text: #e0ffe0; 
-  --muted: #85c285; 
-  --surface: rgba(0, 255, 65, 0.05);
-}
-
-[data-theme="mono-light"] {
-  --accent:#334155; --accent-soft:#475569; --glow1:#dbe3ee; --glow2:#e6ebf3;
-  --bg:#f7f9fc; --line:#ccd6e4; --text:#0f172a; --muted:#52627d;
-  --surface:rgba(15,23,42,.04);
+/* ---------- ธีมสีแดง (Crimson) ตามรูปภาพ ---------- */
+[data-theme="crimson"] {
+  --accent: #ff3333;       /* สีแดงสดสำหรับข้อความ Role และขอบต่างๆ */
+  --accent-soft: #cc0000;  /* สีแดงเข้มเวลา Hover */
+  --glow1: #3a0000;        /* แสงพื้นหลังสีแดงเข้มซ้ายบน */
+  --glow2: #200000;        /* แสงพื้นหลังขวาล่าง */
+  --bg: #050505;           /* พื้นหลังสีดำสนิท */
+  --line: #330000;         /* เส้นคั่นสีแดงมืดๆ */
+  --text: #ffffff;         /* ตัวอักษรสีขาว */
+  --muted: #dddddd;        /* ตัวอักษรสีเทาสว่างสำหรับ About */
+  --surface: rgba(255, 0, 0, 0.05); /* พื้นหลังการ์ดใสๆ อมแดง */
 }
 
 *{ box-sizing:border-box }
@@ -466,59 +104,64 @@ body{
   font-size:38px; font-weight:600; color:var(--accent);
 }
 .hero-text{ flex:1; min-width:240px }
+
+/* ปรับข้อความ Role ให้เป็นสีแดง ตัวพิมพ์ใหญ่ และฟอนต์สไตล์โค้ด */
 .role{
-  font:600 12px/1 var(--mono); letter-spacing:.14em;
-  text-transform:uppercase; color:var(--accent); margin:0 0 8px;
+  font:600 12px/1.4 var(--mono); letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 16px;
 }
-h1{ font-size:clamp(30px,6vw,46px); line-height:1.15; margin:0 0 8px; letter-spacing:-.02em }
+
+/* ชื่อใหญ่และหนาขึ้น */
+h1{ font-size:clamp(36px,6vw,54px); line-height:1.15; font-weight:800; margin:0 0 12px; letter-spacing:-.02em }
 .tagline{ font-size:clamp(17px,2.6vw,20px); color:var(--text); margin:0; opacity:.92 }
 
-.about{ color:var(--muted); margin:26px 0 0; max-width:62ch }
+/* About Me section ปรับให้อ่านง่ายขึ้นเหมือนในรูป */
+.about{ color:var(--muted); margin:36px 0 0; max-width:70ch; font-size: 16px; line-height: 1.8; }
 
-.links{ display:flex; flex-wrap:wrap; gap:10px; padding:0; margin:24px 0 0; list-style:none }
+.links{ display:flex; flex-wrap:wrap; gap:10px; padding:0; margin:32px 0 0; list-style:none }
 .links a{
   display:inline-block; border:1px solid var(--line); border-radius:999px;
-  padding:9px 20px; color:var(--text); text-decoration:none; font-size:15px;
+  padding:9px 26px; color:var(--text); text-decoration:none; font-size:15px;
   transition:border-color .15s ease, color .15s ease, box-shadow .15s ease;
 }
 .links a:hover, .links a:focus-visible{ 
   border-color:var(--accent); 
   color:var(--accent);
-  box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 10px rgba(255, 51, 51, 0.2);
 }
 
 section{ margin-top:52px }
+
+/* หัวข้อ (กำลังเรียนรู้ / ผลงาน) */
 h2{
-  font:600 12px/1 var(--mono); letter-spacing:.16em; text-transform:uppercase;
-  color:var(--muted); border-bottom:1px solid var(--line);
-  padding-bottom:10px; margin:0 0 20px;
+  font:700 15px/1 var(--mono); letter-spacing:.1em;
+  color:var(--text); border-bottom:1px solid var(--line);
+  padding-bottom:12px; margin:0 0 24px;
 }
 
+/* ขีดสีแดงด้านซ้ายเวลามี List เหมือนในรูป */
 .learning{ list-style:none; padding:0; margin:0 }
 .learning li{
-  border-left:2px solid var(--accent); padding:2px 0 2px 16px;
-  margin-bottom:14px; color:var(--muted);
+  border-left:3px solid var(--accent); padding:4px 0 4px 16px;
+  margin-bottom:18px; color:var(--text); font-weight: 500;
 }
 
 .works{ display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)) }
 .work{
-  border:1px solid var(--line); border-radius:12px; padding:16px 18px;
+  border:1px solid var(--line); border-radius:12px; padding:18px 20px;
   background:var(--surface);
   transition: transform .2s ease, border-color .2s ease;
 }
 .work:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent-soft);
+  transform: translateY(-3px);
+  border-color: var(--accent);
 }
-.work h3{ margin:0 0 6px; font-size:17px; color:var(--text); }
-.work p{ margin:0; color:var(--muted); font-size:14.5px }
-.work a{ color:var(--accent); text-decoration:none; font-size:14px; display:inline-block; margin-top:10px }
+.work h3{ margin:0 0 8px; font-size:17px; color:var(--text); font-weight: 700; }
+.work p{ margin:0; color:var(--muted); font-size:14.5px; line-height: 1.6; }
+.work a{ color:var(--accent); text-decoration:none; font-size:14px; display:inline-block; margin-top:12px; font-weight: 600; }
 .work a:hover{ text-decoration:underline }
-.empty{
-  border:1px dashed var(--line); border-radius:12px; padding:26px 20px;
-  color:var(--muted); text-align:center; font-size:15px;
-}
 
+/* Network panel & Footer */
 .panel{ border:1px solid var(--line); border-radius:14px; background:var(--surface); padding:4px 20px 16px }
 .row{
   display:grid; grid-template-columns:minmax(130px,1fr) minmax(0,1.5fr); gap:12px;
@@ -530,12 +173,13 @@ h2{
 .row .note{ display:block; color:var(--muted); font-family:inherit; font-size:12.5px }
 .hint{ color:var(--muted); font-size:14px; margin:14px 0 0 }
 
-footer{ margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); font-size:14px }
-footer a{ color:var(--accent) }
+footer{ margin-top:64px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; text-align:center; }
+footer a{ color:var(--accent); text-decoration:none; }
+footer a:hover{ text-decoration:underline; }
 
 @media (max-width:520px){
   .hero{ padding-top:44px; gap:16px }
-  .avatar, .avatar-fallback{ width:72px; height:72px; font-size:28px }
+  .avatar, .avatar-fallback{ width:80px; height:80px; font-size:28px }
   .row{ grid-template-columns:1fr; gap:2px }
 }
 </style>
@@ -551,19 +195,24 @@ footer a{ color:var(--accent) }
       <p class="tagline" id="tagline"></p>
     </div>
   </header>
+  
   <p class="about" id="about"></p>
+  
   <ul class="links" id="links"></ul>
 
+  <!-- ปรับกลับมาใช้คำว่า กำลังเรียนรู้ ตามรูปต้นฉบับ -->
   <section>
-    <h2>Learning & Interests 🚀</h2>
+    <h2>กำลังเรียนรู้</h2>
     <ul class="learning" id="learning"></ul>
   </section>
 
+  <!-- ปรับกลับมาใช้คำว่า ผลงาน ให้เข้ากับหัวข้อด้านบน -->
   <section>
-    <h2>Projects & Works 🛠️</h2>
+    <h2>ผลงาน</h2>
     <div class="works" id="works"></div>
   </section>
 
+  <!-- Network Info (ซ่อนได้ถ้าไม่ต้องการให้แสดง แต่ผมคงไว้เผื่อคุณใช้โชว์สกิลฝั่ง Web Dev) -->
   <section>
     <h2>Connection Info 🌐</h2>
     <div class="panel">
@@ -573,7 +222,7 @@ footer a{ color:var(--accent) }
   </section>
 
   <footer>
-    Built with HTML, CSS, and JavaScript · Hosted on GitHub Pages ·
+    Built with HTML, CSS, and JavaScript · Hosted on GitHub Pages<br>
     <a id="repolink" href="https://github.com">View source code</a>
   </footer>
 </div>
@@ -582,7 +231,7 @@ footer a{ color:var(--accent) }
 const $ = (id) => document.getElementById(id);
 
 document.title = ME.name + " - Portfolio";
-document.documentElement.dataset.theme = ME.theme || 'ocean';
+document.documentElement.dataset.theme = ME.theme || 'crimson';
 
 $('role').textContent    = ME.role;
 $('name').textContent    = ME.name;
